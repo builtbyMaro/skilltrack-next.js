@@ -1,0 +1,156 @@
+.heroContainer {
+    padding: 0px 128px;
+    background: linear-gradient(20deg, hsl(0, 0%, 100%) 40%, hsl(227, 98%, 78%));
+    height: 150vh;
+    border-radius: 16px;
+}
+
+.heroMain {
+    display: flex;
+    gap: 10px;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding-top: 145px;
+    width: 60%;
+}
+
+.heroText > h1 {
+    font-size: 3em;
+    font-family: roboto;
+    font-weight: 500;
+    line-height: 62px;
+    color: hsl(0, 0%, 0%);
+    max-width: 560px;
+}
+
+.heroText> h1 > span {
+    color: hsl(225, 99%, 46%);
+}
+
+.heroText > h2, .trust > h2 {
+    font-size: 1rem;
+    font-family: roboto;
+    font-weight: 450;
+    line-height: 27px;
+    color: hsl(225, 17%, 58%);
+}
+.heroText > h2 > span {
+    color: hsl(0, 0%, 0%);
+}
+
+.heroButtons{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+}
+
+.button {
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-family: roboto;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(227, 99%, 58%);
+    border: 8px solid hsl(227, 96%, 90%);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.heroButtons h3 {
+    font-size: 0.8rem;
+    font-family: roboto;
+    font-weight: 500;
+    color: hsl(225, 17%, 58%);
+}
+
+.heroButtons img {
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-left: -6px;
+}
+
+.heroImgWrapper {
+    width: 40%;
+    position: relative;
+}
+
+.heroImg1 {
+    width: 400px;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 12%;
+}
+
+.heroImg2 {
+    width: 340px;
+    height: auto;
+    position: absolute;
+    top: 25%;
+    right: 45%;
+}
+
+.trust {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: hsl(300, 16%, 96%);
+    border-radius: 20px;
+    margin-top: 25px;
+    padding: 30px;
+    box-shadow: 1px 1px hsl(0, 1%, 77%);
+}
+
+.trust > p {
+    font-size: 1em;
+    font-family: roboto;
+    font-weight: 500; 
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .heroContainer {
+        padding: 0px 10px;
+    }
+
+    .heroMain {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heroText {
+        width: 100vw;
+        text-align: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .heroText > h1 {
+        max-width: none;
+    }
+
+    .heroImgWrapper {
+        width: 100%;
+    }    
+
+    .heroImg1 {
+        width: 80%;
+        left: 30%;
+    }
+
+    .heroImg2 {
+        width: 70%;
+        top: 15%;
+        right: 35%;
+    }
+
+    .trust {
+        margin-top: none;
+    }
+}

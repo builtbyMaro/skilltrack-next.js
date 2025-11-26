@@ -1,0 +1,46 @@
+.hiwContainer{
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+    margin-top: 40px;
+    padding: 128px;
+}
+
+.hiwImg {
+    position: sticky;
+    top: 70px;
+    height: fit-content;
+    flex: 1;
+    width: 320px;
+    height: auto;
+    object-fit: cover;
+    height: auto;
+}
+
+.hiwText {
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+    padding: 100px;
+    flex: 1;
+}
+
+.hiwItems {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hiwText h2 {
+    font-size: 2.5em;
+    font-family: roboto;
+}
+
+.hiwText p {
+    font-size: 1em;
+    font-family: roboto;
+    font-weight: 400;
+    color: hsl(225, 17%, 58%);
+    max-width: 300px;
+}
+

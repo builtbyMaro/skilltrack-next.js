@@ -1,0 +1,78 @@
+.benefitsContainer {
+    margin-top: 40px;
+    display: flex;
+    gap: 50px;
+    justify-self: center;
+}
+
+.benefitCard1, .benefitCard2, .benefitCard3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px;
+    width: 320px;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.benefitCard1 {
+    background-color: hsl(322, 100%, 95%);
+    box-shadow: 10px 10px 20px hsla(322, 100%, 10%, 0.25);
+    rotate: -5deg;
+    margin-right: -20px;
+}
+.benefitCard1 i{
+    font-size: 3.5em;
+    color: hsl(325, 74%, 27%);
+}
+
+.benefitCard2 {
+    background-color: hsl(52, 100%, 95%);
+    box-shadow: 10px 10px 20px hsla(52, 100%, 10%, 0.25);
+    rotate: 10deg;
+    margin-top: -60px;
+}
+.benefitCard2 i {
+    font-size: 3.5em;
+    color: hsl(36, 96%, 30%);
+}
+
+.benefitCard3 {
+    background-color: hsl(131, 81%, 96%);
+    box-shadow: 10px 10px 20px hsla(131, 81%, 10%, 0.25);
+    rotate: 2deg;
+    margin-bottom: -20px;
+    margin-left: -20px;
+}
+.benefitCard3 i {
+    font-size: 3.5em;
+    color: hsl(135, 100%, 21%);
+}
+
+.benefitCard1::after, .benefitCard2::after, .benefitCard3::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-right: 2px solid hsla(0, 0%, 100%, 0.4);
+    border-bottom: 2px solid hsla(0, 0%, 100%, 0.4);
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.benefitCard1 h2, .benefitCard2 h2, .benefitCard3 h2 {
+    font-size: 1.7em;
+    font-family: roboto;
+    font-weight: 500;
+}
+
+.benefitCard1 h2 {
+    color: hsl(325, 74%, 27%);
+}
+
+.benefitCard2 h2 {
+    color: hsl(36, 96%, 30%);
+}
+
+.benefitCard3 h2 {
+    color: hsl(135, 100%, 21%);
+}
