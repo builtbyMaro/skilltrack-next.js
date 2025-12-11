@@ -24,7 +24,7 @@ const Pricing = () => {
                         <h3 className={billingType === 'yearly' ? `${styles.billing} ${styles.billingActive}` : styles.billing} onClick={Yearly}>Yearly</h3>
                     </div>
                     <div>
-                        <h2>{billingType === 'monthly' ? '$19' : '$156'}<span>{billingType === 'monthly' ? '/month' : '/yearly'}</span></h2>
+                        <h2>{billingType === 'monthly' ? '$19' : '$156'}<span>{billingType === 'monthly' ? '/month' : '/year'}</span></h2>
                         <p>{billingType === 'monthly' ? 'Per user, billed Monthly' : 'per user, billed Yearly ($13/month Save 31%)'}</p>
                     </div>
                     <div className={styles.benefit}>

@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 const Button = ({text, className}) => {
 
     return(
-        <button className={className}>{text}</button>
+        <Link href="/SignUp" className={className}>{text} </Link>
     );
 };
 

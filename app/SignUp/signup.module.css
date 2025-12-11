@@ -1,0 +1,152 @@
+.signupContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 16px;
+    background: linear-gradient(30deg, hsl(0, 0%, 100%), hsl(227, 98%, 78%) 40%);
+    border-radius: 16px;
+}
+
+.signupCard{
+    padding: 16px;
+    border-radius: 8px;
+    background-color: hsl(0, 0%, 100%);
+    width: 400px;
+}
+
+.signupHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signupHeaderText{
+    font-size: 1.5em;
+    font-family: roboto;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+}
+
+.signupHeaderImg{
+    height: 80px;
+    width: 80px;
+    margin-bottom: -10px;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.signupInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.inputWithIcon{
+    position: relative;
+}
+
+.signupInput {
+    padding: 15px 30px;
+    font-size: 0.9em;
+    font-family: roboto;
+    font-weight: 400;
+    color: hsl(0, 0%, 0%);
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 8px;
+    width: 100%;
+    background-color: hsl(0, 4%, 95%);
+}
+
+.nameInputs{
+    display: flex;
+    gap: 16px;
+}
+
+.passwordInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.icons{
+    font-size: 1.2em;
+    color: hsl(0, 0%, 50%);
+    position: absolute;
+    left: 8px;
+    top: 16px;
+}
+
+.showPassword{
+    font-size: 1.2em;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    font-size: 1em;
+    color: hsl(0, 0%, 50%);
+    cursor: pointer;
+}
+
+.loginActions{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.signupButton {
+    padding: 15px;
+    font-size: 1em;
+    font-family: roboto;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(227, 99%, 58%);
+    border: 2px solid hsl(227, 98%, 78%);
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.forgotPassword{
+    font-size: 0.9em;
+    font-family: roboto;
+    font-weight: 400;
+    color: hsl(0, 1%, 27%);
+    cursor: pointer;
+    text-align: center;
+}
+
+.forgotPassword:hover{
+    color: hsl(225, 99%, 46%);
+}
+
+.logIn{
+    font-size: 1em;
+    font-family: roboto;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.logIn span{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.logIn span:hover{
+    color: hsl(225, 99%, 66%);
+}
+
+.error{
+    font-size: 0.8em;
+    font-family: roboto;
+    font-weight: 400;
+    color: hsl(0, 100%, 50%);
+    margin-top: 4px;
+}

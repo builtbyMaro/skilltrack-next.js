@@ -16,9 +16,9 @@ const Navbar = () => {
                     <Link href="#Features">Features</Link>
                     <Link href="#Pricing">Pricing</Link>
                     <Link href="#Faq">FAQ</Link>
-                    <Link href="">Login</Link>
+                    <Link href="/LogIn">Login</Link>
                 </div>
-                <Link href=""><Button text='Sign Up' className={styles.signUpBtn}/></Link>
+                <Button text='Sign Up' className={styles.signUpBtn}/>
             </div>
            </div>
         </nav>
