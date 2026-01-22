@@ -1,62 +1,76 @@
 .faqContainer {
-    display: flex;
-    justify-content: space-between;
-    padding: 128px;
-    margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 128px;
+  margin-top: 100px;
 }
 
 .faqContainer > h2 {
-    font-size: 2em;
-    font-family: roboto;
-    font-weight: 450;
-    color: hsl(224, 78%, 19%);
+  font-size: 2em;
+  font-family: roboto;
+  font-weight: 450;
+  color: hsl(224, 78%, 19%);
 }
 
 .faqItems {
-    display: flex;
-    flex-direction: column;
-    border: 12px solid hsl(227, 96%, 90%);
-    border-radius: 24px;
-    width: 65%;
-    padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border: 12px solid hsl(227, 96%, 90%);
+  border-radius: 24px;
+  width: 65%;
+  padding: 16px;
 }
 
 .accordionItem {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    border-bottom: 1px solid hsl(228, 100%, 98%);
-    border-radius: 16px;
-    transition: background-color 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-bottom: 1px solid hsl(228, 100%, 98%);
+  border-radius: 16px;
+  transition: background-color 0.4s ease-in-out;
 }
 
 .accordionActive {
-    background-color: hsl(227, 96%, 90%);
+  background-color: hsl(227, 96%, 90%);
 }
 
 .accordionQuestion {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1em;
-    font-family: roboto;
-    color: hsl(224, 28%, 40%);
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  font-family: roboto;
+  color: hsl(224, 28%, 40%);
+  cursor: pointer;
 }
 
 .accordionQuestion i {
-    font-size: 1.5em;
-    color: hsl(224, 99%, 46%);
+  font-size: 1.5em;
+  color: hsl(224, 99%, 46%);
 }
 
 .accordionAnswer {
-    font-size: 1em;
-    font-family: roboto;
-    color: hsl(224, 18%, 59%);
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-Height 0.4s ease-in-out;
+  font-size: 1em;
+  font-family: roboto;
+  color: hsl(224, 18%, 59%);
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-Height 0.4s ease-in-out;
 }
 
 .accordionAnswerOpen {
-    max-height: 100px;
+  max-height: 100px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .faqContainer {
+    flex-direction: column;
+    padding: 10px;
+    gap: 16px;
+    margin-top: 70px;
+    font-size: 75%;
+  }
+
+  .faqItems {
+    width: 100%;
+  }
 }

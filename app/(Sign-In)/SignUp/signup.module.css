@@ -1,0 +1,221 @@
+.signupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 16px;
+  background: linear-gradient(30deg, hsl(0, 0%, 100%), hsl(227, 98%, 78%) 40%);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: hsl(0, 0%, 100%);
+  width: 400px;
+}
+
+.signupHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signupHeaderText {
+  font-size: 1.5em;
+  font-family: roboto;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+}
+
+.signupHeaderImg {
+  height: 80px;
+  width: 80px;
+  margin-bottom: -10px;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.signupInput {
+  padding: 15px 30px;
+  font-size: 0.9em;
+  font-family: roboto;
+  font-weight: 400;
+  color: hsl(0, 0%, 0%);
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 8px;
+  width: 100%;
+  background-color: hsl(0, 4%, 95%);
+}
+
+.nameInputs,
+.passwordInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.icons {
+  font-size: 1.2em;
+  color: hsl(0, 0%, 50%);
+  position: absolute;
+  left: 8px;
+  top: 16px;
+}
+
+.showPassword {
+  font-size: 1.2em;
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  font-size: 1em;
+  color: hsl(0, 0%, 50%);
+  cursor: pointer;
+}
+
+.logIn {
+  font-size: 1em;
+  font-family: roboto;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logIn span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logIn span:hover {
+  color: hsl(225, 99%, 66%);
+}
+
+.error {
+  font-size: 0.8em;
+  font-family: roboto;
+  font-weight: 400;
+  color: hsl(0, 0%, 35%);
+  margin-top: 4px;
+}
+
+.methodStep,
+.emailStep,
+.nameStep,
+.passwordStep {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+}
+
+.methodStep {
+  gap: 16px;
+}
+
+.googleButton,
+.emailButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: roboto;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.googleButton {
+  background: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 87%);
+  color: hsl(0, 0%, 27%);
+}
+
+.googleButton img {
+  width: 18px;
+  height: 18px;
+}
+
+.googleButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emailButton {
+  background: hsl(227, 99%, 58%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+}
+
+.emailButton:hover {
+  background: hsl(227, 99%, 80%);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: hsl(0, 0%, 0%);
+  font-size: 1em;
+  font-family: roboto;
+  width: 100%;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: hsl(0, 0%, 75%);
+}
+
+.inputs {
+  padding: 16px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nextBtn,
+.prevBtn {
+  background-color: hsl(227, 99%, 58%);
+  padding: 4px 12px;
+  font-family: roboto;
+  font-size: 1em;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prevBtn {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 30%);
+  font-size: 2em;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .card {
+    padding: 8px;
+    width: 90%;
+  }
+}

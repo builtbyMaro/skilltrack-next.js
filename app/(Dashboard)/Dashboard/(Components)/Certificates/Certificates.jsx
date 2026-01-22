@@ -1,9 +1,10 @@
-
+import styles from './Certificates.module.css';
 
 const Certificates = () => {
-  return (
+
+  return(
     <div>
-      <h1>This is the certificates Page</h1>
+      <h2>Certificates Section</h2>
     </div>
   )
 }

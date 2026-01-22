@@ -44,13 +44,18 @@ const MyCourses = ({ userCourses, viewCertificate }) => {
                     <div className={styles.courseDetails}>
                       <img src="/card6.jpg" alt={course.title} className={styles.courseImage} />
                       <div className={styles.courseText}>
+                        <div className={`${styles[`category-${course.category}`]} ${styles.courseCategory}`}>
+                          <h4>{course.category}</h4>
+                        </div>
                         <h3 className={styles.courseTitle}>{course.title}</h3>
                         <p className={styles.courseDescription}>{course.description}</p>
-                        <p className={styles.courseLessons}> <span>completed </span>3/{course.totalLessons} Lessons</p>
+                        <p className={styles.courseLessons}> <span>completed {course.completedLessons}</span>/{course.totalLessons} Lessons</p>
                       </div>
                     </div>
                     <div className={styles.courseActions}>
-                      <h3 className={styles.courseCategory}><span>Category: </span>{course.category}</h3>
+                      <div className={styles.progressBar}>
+                      <div className={styles.progressFill} style={{width: `${(course.completedLessons / course.totalLessons) * 100}%`}}></div>
+                    </div>
                       <button className={styles.resumeButton}>Resume</button>
                     </div>
                   </div>
@@ -69,14 +74,14 @@ const MyCourses = ({ userCourses, viewCertificate }) => {
                     <div className={styles.courseDetails}>
                       <img src="/card6.jpg" alt={course.title} className={styles.courseImage} />
                       <div className={styles.courseText}>
+                        <div className={`${styles[`category-${course.category}`]} ${styles.courseCategory}`}>
+                          <h4>{course.category}</h4>
+                        </div>
                         <h3 className={styles.courseTitle}>{course.title}</h3>
                         <p className={styles.courseDescription}>{course.description}</p>
                         <p className={styles.courseLessons}>{course.status}</p>
+                        <button className={styles.certificateButton} onClick={viewCertificate}>View Certificate</button>
                       </div>
-                    </div>
-                    <div className={styles.courseActions}>
-                      <h3 className={styles.courseCategory}><span>Category: </span>{course.category}</h3>
-                      <button className={styles.certificateButton} onClick={viewCertificate}>View Certificate</button>
                     </div>
                   </div>
                 ))

@@ -1,47 +1,79 @@
 .ctaContainer {
-    padding: 128px;
-    border-radius: 24px;
-    background: url('/cta.png'), linear-gradient(hsl(224, 86%, 69%), hsl(224, 99%, 46%));
-    height: 100vh;
-    margin: 5px;
-    background-repeat: no-repeat;
-    background-position: right 120px, center;
-    background-size: 500px, cover;
+  padding: 128px;
+  border-radius: 24px;
+  background: url("/cta.png"),
+    linear-gradient(hsl(224, 86%, 69%), hsl(224, 99%, 46%));
+  height: 100vh;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: right 120px, center;
+  background-size: 500px, cover;
 }
 
 .ctaText {
-    display: flex;
-    flex-direction: column;
-    max-width: 60%;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  gap: 40px;
 }
 
 .ctaContainer h2 {
-    font-size: 2.5em;
-    font-family: roboto;
-    font-weight: 400;
-    color: hsl(0, 0%, 100%);
+  font-size: 2.5em;
+  font-family: roboto;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
 }
 
 .ctaContainer p {
-    font-size: 1em;
-    font-family: roboto;
-    font-weight: 450;
-    line-height: 32px;
-    color:hsl(224, 86%, 78%);
-    max-width: 400px;
-    margin-bottom: 30px;
+  font-size: 1em;
+  font-family: roboto;
+  font-weight: 450;
+  line-height: 32px;
+  color: hsl(224, 86%, 78%);
+  max-width: 400px;
+  margin-bottom: 30px;
 }
 
-.button{
-    padding: 15px 20px;
-    font-size: 1rem;
-    font-family: roboto;
-    font-weight: 500;
-    color: hsl(224, 53%, 25%);
-    background-color: hsl(0, 0%, 100%);
-    border: 8px solid hsl(224, 86%, 67%);
-    border-radius: 50px;
-    cursor: pointer;
-    width: fit-content;
+.button {
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-family: roboto;
+  font-weight: 500;
+  color: hsl(224, 53%, 25%);
+  background-color: hsl(0, 0%, 100%);
+  border: 8px solid hsl(224, 86%, 67%);
+  border-radius: 50px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .ctaContainer {
+    background: linear-gradient(hsl(224, 86%, 69%), hsl(224, 99%, 46%));
+    padding: 24px;
+    height: fit-content;
+    margin-top: 50px;
+  }
+
+  .ctaText {
+    max-width: 100%;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .ctaContainer h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .ctaText p {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .button {
+    font-size: 85%;
+    width: 100%;
+    text-align: center;
+  }
 }

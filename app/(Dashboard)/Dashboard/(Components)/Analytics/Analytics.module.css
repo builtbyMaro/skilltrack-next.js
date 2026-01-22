@@ -1,0 +1,104 @@
+.analyticsContainer {
+  padding: 20px;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.welcomeMessage {
+    width: 100%;
+    background-color: hsl(224, 99%, 46%);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.welcomeMessage h2 {
+    font-size: 1.5em;
+    font-family: roboto;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+}
+
+.welcomeMessage p {
+    font-size: 1em;
+    font-family: roboto;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+    margin-top: 4px;
+}
+
+.analyticsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.analyticsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 200px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.analyticsCard p {
+    font-size: 0.9em;
+    font-family: roboto;
+    font-weight: 400;
+}
+
+.analyticsCard h3 {
+    font-size: 1.5em;
+    font-family: roboto;
+    font-weight: 500;
+    color: hsl(224, 84%, 63%);
+}
+
+.recentAnalysis {
+    font-size: 0.7em;
+    font-family: roboto;
+    font-weight: 400;
+    color: hsl(134, 61%, 41%);
+}
+
+.chartsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 24px;
+    align-items: center;
+}
+
+.chartsContainer {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.chartHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.chartHeader h3{
+    font-size: 1em;
+    font-family: roboto;
+    font-weight: 500;
+}
+
+.chartRanges{
+    font-size: 0.7em;
+    font-family: roboto;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid hsl(0, 0%, 80%);
+    background-color: hsl(0, 0%, 98%);
+    cursor: pointer;
+}

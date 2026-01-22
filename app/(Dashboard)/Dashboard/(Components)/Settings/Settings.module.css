@@ -1,0 +1,31 @@
+.settingsContainer {
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.settingsSections {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    z-index: 1;
+    border-bottom: 1px solid hsl(0, 0%, 85%);
+    background-color: hsl(0, 0%, 98%);
+}
+
+.settingsSection{
+    font-size: 1.2em;
+    font-family: roboto;
+    font-weight: 400;
+    color: hsl(0, 0%, 75%);
+    padding: 8px;
+    cursor: pointer;
+}
+
+.settingsSectionActive {
+    background-color: hsl(0, 0%, 100%);
+    border-bottom: 3px solid hsl(220, 90%, 56%);
+    color: hsl(220, 90%, 56%);
+    font-weight: 500;
+}

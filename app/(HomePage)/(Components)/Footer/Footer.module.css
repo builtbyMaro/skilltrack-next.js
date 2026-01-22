@@ -1,36 +1,36 @@
 .footerContainer {
-    display: flex;
-    padding: 0 110px;
-    margin: 70px 0;
-    gap: 30px;
-    align-items: start;
+  display: flex;
+  padding: 0 110px;
+  margin: 70px 0;
+  gap: 30px;
+  align-items: start;
 }
 
 .side1 {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 70%;
 }
 
 .side2 {
-    width: 30%;
-    display: flex;
-    gap: 100px;
+  width: 30%;
+  display: flex;
+  gap: 100px;
 }
 
 .footerImg {
-    width: 300px;
-    height: 50px;
-    object-fit: cover;
-    margin-left: -60px;
-    margin-bottom: -25px;
+  width: 300px;
+  height: 50px;
+  object-fit: cover;
+  margin-left: -60px;
+  margin-bottom: -25px;
 }
 
 .bottom {
-    width: 100%;
-    padding-top: 16px;
-    position: relative;
+  width: 100%;
+  padding-top: 16px;
+  position: relative;
 }
 
 .bottom::before {
@@ -44,35 +44,53 @@
 }
 
 .footerContainer h3 {
-    font-size: 0.9em;
-    font-family: roboto;
-    font-weight: 400;
-    color: hsl(224, 74%, 20%);
+  font-size: 0.9em;
+  font-family: roboto;
+  font-weight: 400;
+  color: hsl(224, 74%, 20%);
 }
 
 .bottom h3 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .footerContainer a {
-    font-size: 0.8em;
-    font-family: roboto;
-    font-weight: 400;
-    color: hsl(224, 74%, 20%);
+  font-size: 0.8em;
+  font-family: roboto;
+  font-weight: 400;
+  color: hsl(224, 74%, 20%);
 }
 
 .bottom a {
-    color: hsl(223, 18%, 67%);
+  color: hsl(223, 18%, 67%);
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .links {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .footerContainer {
     flex-direction: column;
-    gap: 10px;
+    padding: 10px;
+    margin: 50px 0px 20px 0px;
+  }
+
+  .side1,
+  .side2 {
+    width: 100%;
+  }
+
+  .side2 {
+    justify-content: center;
+    text-align: center;
+  }
 }

@@ -10,12 +10,19 @@
   border-right: 1px solid hsl(224, 99%, 46%);
 }
 
+.sidebarHeader{
+  font-size: 0.9em;
+  font-family: roboto;
+  font-weight: 400;
+  color: hsl(227, 98%, 68%);
+  margin: 30px 0px 10px 10px;
+}
+
 .sidebarItems {
     display: flex;
     flex-direction: column;
     gap: 24px;
     list-style: none;
-    margin-top: 30px;
 }
 
 .dashboardItems{
@@ -27,7 +34,7 @@
 .dashboardItem, .Logout {
     display: flex;
     align-items: center;
-    font-size: 1.3em;
+    font-size: 1em;
     font-family: roboto;
     font-weight: 500;
     color: hsl(227, 98%, 78%);
@@ -53,7 +60,7 @@
 .activeItem{
   display: flex;
   align-items: center;
-  font-size: 1.3em;
+  font-size: 1em;
   font-family: roboto;
   font-weight: 500;
   padding: 10px 15px;

@@ -115,13 +115,34 @@
 .courseActions{
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
+    gap: 8px;
+}
+
+.progressBar{
+    background-color: hsl(0, 0%, 95%);
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+}
+
+.progressFill{
+    height: 100%;
+    background-color: hsl(224, 99%, 46%);
+    border-radius: inherit;
+    position: relative;
+    max-width: 100%;
 }
 
 .courseCategory{
-    font-size: 1em;
+    font-size: 0.9em;
     font-family: roboto;
     font-weight: 400;
+    background-color: hsl(131, 81%, 96%);
+    color: hsl(135, 100%, 21%);
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 2px;
 }
 
 .courseCategory span{
@@ -140,6 +161,7 @@
     border: none;
     border-radius: 24px;
     cursor: pointer;
+    align-self: end;
 }
 
 .noCourses{
@@ -147,4 +169,44 @@
     font-family: roboto;
     font-family: 500;
     color: hsl(0, 0%, 75%);
+}
+
+.category-Tech {
+  background-color: hsl(131, 81%, 96%);
+  color: hsl(135, 100%, 21%);
+}
+
+.category-Finance {
+  background-color: hsl(322, 100%, 95%);
+  color: hsl(325, 74%, 27%);
+}
+
+.category-Management {
+  background-color: hsl(0, 100%, 95%);
+  color: hsl(0, 70%, 30%);
+}
+
+.category-Economics {
+  background-color: hsl(210, 100%, 95%);
+  color: hsl(215, 85%, 30%);
+}
+
+.category-Leadership {
+  background-color: hsl(36, 100%, 95%);
+  color: hsl(32, 90%, 30%);
+}
+
+.category-Human-Resources {
+  background-color: hsl(260, 100%, 96%);
+  color: hsl(265, 65%, 30%);
+}
+
+.category-International-Tax {
+  background-color: hsl(170, 70%, 95%);
+  color: hsl(175, 65%, 28%);
+}
+
+.category-Compliance {
+  background-color: hsl(15, 100%, 95%);
+  color: hsl(18, 80%, 30%);
 }

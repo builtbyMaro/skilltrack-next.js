@@ -1,132 +1,213 @@
 .featuresContainer {
-    margin-top: 200px;
-    padding: 0px 128px;
+  margin-top: 200px;
+  padding: 0px 128px;
 }
 
 .featuresHeader {
-    font-size: 2.5em;
-    font-family: roboto;
-    font-weight: 400;
-    max-width: 600px;
-    color: hsl(224, 100%, 15%);
-    margin-bottom: 50px;
+  font-size: 2.5em;
+  font-family: roboto;
+  font-weight: 400;
+  max-width: 600px;
+  color: hsl(224, 100%, 15%);
+  margin-bottom: 50px;
 }
 
 .featuresHeader span {
-    color: hsl(224, 99%, 46%);
-    font-weight: 500;
+  color: hsl(224, 99%, 46%);
+  font-weight: 500;
 }
 
 .featureCards {
-    display: grid;
-    grid-template-columns: repeat(6, 2fr);
-    grid-template-rows: repeat(6, 2fr);
-    gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(6, 2fr);
+  grid-template-rows: repeat(6, 2fr);
+  gap: 16px;
 }
 
-.card1, .card2, .card3, .card4, .card5, .card6 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;       /* natural spacing */
-    justify-content: flex-start;
-    border-radius: 24px;
-    height: 420px;
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  justify-content: flex-start;
+  border-radius: 24px;
+  height: 420px;
 }
 
 .featureCards h3 {
-    font-size: 1.3em;
-    font-family: roboto;
-    font-weight: 500;
-    color: hsl(224, 100%, 15%);
+  font-size: 1.3em;
+  font-family: roboto;
+  font-weight: 500;
+  color: hsl(224, 100%, 15%);
 }
 
 .featureCards p {
-    font-size: 0.8em;
-    font-family: roboto;
-    font-weight: 400;
-    color: hsl(223, 28%, 65%);
+  font-size: 0.8em;
+  font-family: roboto;
+  font-weight: 400;
+  color: hsl(223, 28%, 65%);
 }
 
 .card1 {
-    grid-row: span 2;
-    grid-column: span 4;
-    color: hsl(0, 0%, 100%);
-    padding: 36px;
-    background: linear-gradient(hsl(224, 86%, 58%, 0.8), hsl(225, 100%, 96%, 0.8)), url('/public/cloud2-removebg-preview.png');
-    background-repeat: no-repeat;
-    background-position: center, left -70px bottom -260px;
-    background-size: cover;
-    overflow: hidden;
+  grid-row: span 2;
+  grid-column: span 4;
+  color: hsl(0, 0%, 100%);
+  padding: 36px;
+  background:
+    linear-gradient(hsl(224, 86%, 58%, 0.8), hsl(225, 100%, 96%, 0.8)),
+    url("/cloud2-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-position:
+    center,
+    left -70px bottom -260px;
+  background-size: cover;
+  overflow: hidden;
 }
-.card1 h3, .card1 p {
-    color: hsl(0, 0%, 100%);
+.card1 h3,
+.card1 p {
+  color: hsl(0, 0%, 100%);
 }
 
-.card2, .card3, .card4, .card5 {
-    grid-row: span 2;
-    grid-column: span 2;
-    padding: 36px;
+.card2,
+.card3,
+.card4,
+.card5 {
+  grid-row: span 2;
+  grid-column: span 2;
+  padding: 36px;
 }
 
 .card2 {
-    background: linear-gradient( hsla(225, 96%, 76%, 0.9), hsla(225, 96%, 94%, 0.9)), url('/public/cloud2-removebg-preview.png');
-    background-repeat: no-repeat;
-    background-position: center, left -100px bottom -200px;
-    background-size: cover;
+  background:
+    linear-gradient(hsla(225, 96%, 76%, 0.9), hsla(225, 96%, 94%, 0.9)),
+    url("/cloud2-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-position:
+    center,
+    left -100px bottom -200px;
+  background-size: cover;
 }
 
 .card4 {
-    background: hsl(225, 96%, 96%);
+  background: hsl(225, 96%, 96%);
 }
 
-.card3, .card5 {
-    background: hsl(225, 96%, 94%);
+.card3,
+.card5 {
+  background: hsl(225, 96%, 94%);
 }
 
 .card6 {
-    grid-row: span 2;
-    grid-column: span 6;
-    background: url('/card6.jpg');
-    background-size: cover;
+  grid-row: span 2;
+  grid-column: span 6;
+  background: url("/card6.jpg");
+  background-size: cover;
 }
 
 .card1 img {
-    width: 500px;
-    margin-top: -50px;
-    flex-shrink: 0;
+  width: 500px;
+  margin-top: -50px;
+  flex-shrink: 0;
 }
 
-.card2 img, .card3 img {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-    margin-top: -80px;
-    margin-right: -10px;
+.card2 img,
+.card3 img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin-top: -80px;
+  margin-right: -10px;
 }
 .card2 h3 {
-    margin-top: -70px;
+  margin-top: -70px;
 }
 
 .card3 h3 {
-    margin-top: -100px;
+  margin-top: -100px;
 }
 
 .card4 img {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-    margin-top: -100px;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin-top: -100px;
 }
 
 .card5Img1 {
-    width: 360px;
-    margin-right: -70px;
+  width: 360px;
+  margin-right: -70px;
 }
 
 .card5Img2 {
-    width: 100px;
-    margin-top: -170px;
-    margin-right: -160px;
+  width: 100px;
+  margin-top: -170px;
+  margin-right: -160px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .featuresContainer {
+    margin-top: 0px;
+    padding: 0px 10px;
+  }
+
+  .featureCards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featuresHeader {
+    font-size: 1.5em;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    height: 300px;
+  }
+
+  .card1 img {
+    width: 300px;
+  }
+
+  .card2 img,
+  .card3 img {
+    width: 200px;
+    margin-top: -60px;
+  }
+
+  .card2 h3 {
+    margin-top: -50;
+  }
+
+  .card3 h3 {
+    margin-top: -80px;
+  }
+
+  .card4 img {
+    width: 260px;
+  }
+
+  .card5Img1 {
+    width: 260px;
+  }
+
+  .card5Img2 {
+    width: 60px;
+    margin-top: -130px;
+    margin-right: -130px;
+  }
+
+  .card6 {
+    background: url("/card6-mobile.jpg");
+    background-size: cover;
+  }
 }

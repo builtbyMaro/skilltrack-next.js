@@ -2,37 +2,53 @@
     display: flex;
     padding: 24px;
     gap: 16px;
-    height: 91vh;
 }
 
-.coursesInProgress, .recommendedCourses{
-    margin-top: 50px;
+.coursesInProgress{
+    display: flex;
+    flex-direction: column;
 }
 
 .overviewCourses{
-    flex: 2;
-    overflow-y: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainHeader{
+    background-color: hsl(0, 0%, 95%);
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 1em;
+    font-family: roboto;
+    font-weight: 500;
+    color: hsl(224, 84%, 63%);
+    margin-bottom: 24px;
+    width: 100%;
 }
 
 .headers{
-    font-size: 1.5em;
-    font-family: roboto;
-    font-weight: 600;
-    margin-bottom: 30px;
-    text-align: center;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    width: 100%;
+    align-self: center;
 }
 
-.headers::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 45%;
-  width: 10%;
-  height: 3px;
-  background-color: hsl(240, 100%, 50%);
-  border-radius: 8px;
-  margin-top: 3px;
+.headers h3{
+    font-size: 1em;
+    font-family: roboto;
+    font-weight: 500;
+}
+
+.headers p{
+    font-size: 0.9em;
+    font-family: roboto;
+    font-weight: 400;
+    color: hsl(224, 84%, 63%);
+    cursor: pointer;
 }
 
 .coursesList{
@@ -46,11 +62,10 @@
     display: flex;
     align-items: stretch;
     gap: 5px;
-    width: 90%;
+    width: 100%;
     padding: 16px;
     border-radius: 16px;
     box-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.25);
-    transition: background-color 0.2s ease-in-out;
 }
 
 .courseImage{
@@ -63,6 +78,16 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 70%;
+}
+
+.courseCategory{
+    font-size: 0.9em;
+    font-family: roboto;
+    font-weight: 400;
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 2px;
 }
 
 .courseTitle{
@@ -87,6 +112,29 @@
     color: hsl(0, 0%, 75%);
 }
 
+.actions{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: end;
+}
+
+.progressBar{
+    background-color: hsl(0, 0%, 95%);
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+}
+
+.progressFill{
+    height: 100%;
+    background-color: hsl(224, 99%, 46%);
+    border-radius: inherit;
+    position: relative;
+    max-width: 100%;
+}
+
 .resumeButton, .enrollButton{
     font-size: 1em;
     font-family: roboto;
@@ -94,77 +142,137 @@
     color: hsl(0, 0%, 100%);
     background-color: hsl(224, 99%, 46%);
     width: fit-content;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: none;
     border-radius: 24px;
     cursor: pointer;
 }
 
+.recommendedCourses > .coursesList {
+    display: flex;
+    flex-direction: row;
+}
+
+.recommendedCourses > .headers{
+    margin-top: 30px;
+}
+
+.recommendedCourses .courseCard{
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+}
+
+.recommendedCourses .courseImage{
+    width: 100%;
+    height: 100px;
+}
+
+.recommendedCourses .courseDetails{
+    width: 100%;
+}
+
 .overviewStats{
-    flex: 1;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     align-items: center;
-    margin-top: 30px;
-    overflow-y: auto;
 }
 
 .statsHeader{
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: roboto;
     font-weight: 600;
     margin-bottom: 10px;
     text-align: center;
-    position: relative;
 }
 
-.statsHeader::before{
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 45%;
-    width: 30%;
-    height: 3px;
-    background-color: hsl(240, 100%, 50%);
-    border-radius: 8px;
-    margin-top: 3px;
+.statsHeader span{
+    color: hsl(0, 0%, 75%);
 }
 
-.statCard{
+.statCard1, .statCard2, .statCard3, .statCard4{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 16px;
+    align-items: start;
+    padding: 24px;
     border-radius: 24px;
     gap: 8px;
-    width: 90%;
-    background-color: hsl(224, 99%, 46%);
-    box-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.25);
+    width: 70%;
 }
 
-.statIcon{
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.statCard1 > i, .statCard2 > i, .statCard3 > i, .statCard4 > i{
+    font-size: 1.5em;
 }
 
-.statIcon i{
-    font-size: 3em;
-    color: hsl(0, 0%, 100%);
+.statCard1{
+    background-color: hsl(52, 100%, 95%);
+    color: hsl(36, 96%, 30%);
 }
 
-.statIcon h3{
-    font-size: 2.5em;
-    font-family: roboto;
-    font-weight: 500;
-    color: hsl(0, 0%, 100%);
+.statCard2{
+    background-color: hsl(131, 81%, 96%);
+    color: hsl(135, 100%, 21%);
+}
+
+.statCard3{
+    background-color: hsl(210, 100%, 95%);
+    color: hsl(215, 85%, 30%);
+}
+
+.statCard4{
+    background-color: hsl(322, 100%, 95%);
+    color: hsl(325, 74%, 27%);
 }
 
 .statDetails{
     font-size: 1em;
     font-family: roboto;
     font-weight: 500;
-    text-align: center;
-    color: hsl(0, 0%, 100%);
+}
+
+.statNumber{
+    font-size: 2em;
+    font-family: roboto;
+}
+
+.category-Tech {
+  background-color: hsl(131, 81%, 96%);
+  color: hsl(135, 100%, 21%);
+}
+
+.category-Finance {
+  background-color: hsl(322, 100%, 95%);
+  color: hsl(325, 74%, 27%);
+}
+
+.category-Management {
+  background-color: hsl(0, 100%, 95%);
+  color: hsl(0, 70%, 30%);
+}
+
+.category-Economics {
+  background-color: hsl(210, 100%, 95%);
+  color: hsl(215, 85%, 30%);
+}
+
+.category-Leadership {
+  background-color: hsl(36, 100%, 95%);
+  color: hsl(32, 90%, 30%);
+}
+
+.category-Human-Resources {
+  background-color: hsl(260, 100%, 96%);
+  color: hsl(265, 65%, 30%);
+}
+
+.category-International-Tax {
+  background-color: hsl(170, 70%, 95%);
+  color: hsl(175, 65%, 28%);
+}
+
+.category-Compliance {
+  background-color: hsl(15, 100%, 95%);
+  color: hsl(18, 80%, 30%);
 }

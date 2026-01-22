@@ -16,13 +16,13 @@ const Navbar = ({ userImg, userName }) => {
       </div>
       <div className={styles.navBtns}>
         <div className={styles.navLinks}>
-            <Link href="" onClick={() => setActivePage('Dashboard')} className={ activePage === 'Dashboard' ? `${styles.navLink} ${styles.activeLink}` : styles.navLink}>Dashboard</Link>
-            <Link href="" onClick={() => setActivePage('Courses')} className={ activePage === 'Courses' ? `${styles.navLink} ${styles.activeLink}` : styles.navLink}>Courses</Link>
-            <Link href=""  onClick={() => setActivePage('Updates')} className={ activePage === 'Updates' ? `${styles.navLink} ${styles.activeLink}` : styles.navLink}>Updates</Link>
+            <Link href="/Dashboard" onClick={() => setActivePage('Dashboard')} className={ activePage === 'Dashboard' ? `${styles.navLink} ${styles.activeLink}` : styles.navLink}>Dashboard</Link>
+            <Link href="/Courses" onClick={() => setActivePage('Courses')} className={ activePage === 'Courses' ? `${styles.navLink} ${styles.activeLink}` : styles.navLink}>Courses</Link>
+            <Link href="/Updates"  onClick={() => setActivePage('Updates')} className={ activePage === 'Updates' ? `${styles.navLink} ${styles.activeLink}` : styles.navLink}>Updates</Link>
         </div>
         <div className={styles.userProfile}>
-            <p className={styles.userName}>{userName || 'Princewill'}</p>
             <img src={userImg || './default.jpg'} alt="profilepic" className={styles.userImg}/>
+            <p className={styles.userName}>{userName || 'Princewill'}</p>
         </div>
       </div>
     </nav>
