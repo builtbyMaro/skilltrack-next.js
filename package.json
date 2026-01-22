@@ -11,7 +11,7 @@
   "dependencies": {
     "boxicons": "^2.1.4",
     "framer-motion": "^12.26.2",
-    "next": "16.0.3",
+    "next": "^16.1.4",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
