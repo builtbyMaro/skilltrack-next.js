@@ -7,7 +7,6 @@ import Link from "next/link";
 import Method from "./components/method";
 import Email from "./components/email";
 import loginUser from "@/lib/Auth/loginAuth";
-import useBackNavigation from "@/lib/Hooks/useBackNavigation";
 
 const Login = () => {
   const [step, setStep] = useState("method");
@@ -27,10 +26,6 @@ const Login = () => {
       password: "",
     });
   };
-
-  useBackNavigation(step, () => {
-    if (step === "email") handleBack("method");
-  });
 
   const [loginData, setLoginData] = useState({
     email: "",

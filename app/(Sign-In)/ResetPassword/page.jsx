@@ -8,7 +8,6 @@ import Method from "./components/method";
 import Email from "./components/email";
 import Password from "./components/password";
 import { resetUserPassword } from "@/lib/Auth/resetAuth";
-import useBackNavigation from "@/lib/Hooks/useBackNavigation";
 
 const Reset = () => {
   const [step, setStep] = useState("method");
@@ -24,11 +23,6 @@ const Reset = () => {
     setStep(prevStep);
     setErrors({});
   };
-
-  useBackNavigation(step, () => {
-    if (step === "email") handleBack("method");
-    if (step === "password") handleBack("email");
-  });
 
   const [users, setUsers] = useState([]);
   useEffect(() => {

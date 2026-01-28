@@ -10,7 +10,6 @@ import Name from "./components/name";
 import Password from "./components/password";
 import { userExists } from "@/lib/Auth/userExists";
 import { saveNewUser } from "@/lib/Auth/signupAuth";
-import useBackNavigation from "@/lib/Hooks/useBackNavigation";
 
 const SignUp = () => {
   const [step, setStep] = useState("method");
@@ -26,12 +25,6 @@ const SignUp = () => {
     setStep(prevStep);
     setErrors({});
   };
-
-  useBackNavigation(step, () => {
-    if (step === "email") handleBack("method");
-    if (step === "name") handleBack("email");
-    if (step === "password") handleBack("name");
-  });
 
   const [userData, setUserData] = useState({
     firstName: "",
