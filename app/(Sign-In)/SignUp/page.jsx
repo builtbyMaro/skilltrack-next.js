@@ -10,8 +10,11 @@ import Name from "./components/name";
 import Password from "./components/password";
 import { userExists } from "@/lib/Auth/userExists";
 import { saveNewUser } from "@/lib/Auth/signupAuth";
+import { useRouter } from "next/navigation";
+import Spinner from "@/Components/spinner";
 
 const SignUp = () => {
+  const [loading, setLoading] = useState(false);
   const [step, setStep] = useState("method");
   const [direction, setDirection] = useState(0);
 
@@ -48,6 +51,13 @@ const SignUp = () => {
   }, []);
 
   const [errors, setErrors] = useState({});
+  const router = useRouter();
+  const redirectUser = () => {
+    setTimeout(() => {
+      router.replace("/Dashboard");
+    }, 1000);
+  };
+
   const handleSignUp = () => {
     const emailExists = userExists(users, userData.email);
     if (emailExists) {
@@ -58,6 +68,7 @@ const SignUp = () => {
     const updatedUsers = saveNewUser(users, userData);
     setUsers(updatedUsers);
 
+    localStorage.setItem("loggedInUser", JSON.stringify(userData));
     setUserData({
       firstName: "",
       lastName: "",
@@ -65,10 +76,23 @@ const SignUp = () => {
       password: "",
       confirmPassword: "",
     });
-    alert("Sign Up Successful");
     setStep("method");
     setDirection(0);
+    setLoading(true);
+    redirectUser();
   };
+
+  if (loading) {
+    return (
+      <div className={styles.loadingScreen}>
+        <div className={styles.successMessage}>
+          <h4>Account created successfully!</h4>
+          <h4>Redirecting to Dashboard...</h4>
+        </div>
+        <Spinner size={30} />
+      </div>
+    );
+  }
 
   return (
     <div className={styles.signupContainer}>

@@ -3,13 +3,16 @@ import "boxicons/css/boxicons.min.css";
 import styles from "./reset.module.css";
 import { AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Method from "./components/method";
 import Email from "./components/email";
 import Password from "./components/password";
 import { resetUserPassword } from "@/lib/Auth/resetAuth";
+import Spinner from "@/Components/spinner";
 
 const Reset = () => {
+  const [loading, setLoading] = useState(false);
   const [step, setStep] = useState("method");
   const [direction, setDirection] = useState(0);
 
@@ -44,6 +47,12 @@ const Reset = () => {
   };
 
   const [errors, setErrors] = useState({});
+  const router = useRouter();
+  const redirectUser = () => {
+    setTimeout(() => {
+      router.replace("/LogIn");
+    }, 1000);
+  };
   const handleReset = () => {
     const updatedUsers = resetUserPassword(
       users,
@@ -51,6 +60,7 @@ const Reset = () => {
       newPassword.password,
     );
     setUsers(updatedUsers);
+    setLoading(true);
     setNewPassword({
       password: "",
       confirmPassword: "",
@@ -59,7 +69,20 @@ const Reset = () => {
     alert("Reset successful!");
     setResetEmail("");
     setStep("method");
+    redirectUser();
   };
+
+  if (loading) {
+    return (
+      <div className={styles.loadingScreen}>
+        <div className={styles.successMessage}>
+          <h4>Password reset successful!</h4>
+          <h4>Redirecting to Log In...</h4>
+        </div>
+        <Spinner size={30} />
+      </div>
+    );
+  }
 
   return (
     <div className={styles.resetContainer}>

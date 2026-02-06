@@ -213,6 +213,25 @@
   font-size: 2em;
 }
 
+.successMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: roboto;
+  font-size: 1em;
+  color: hsl(227, 99%, 58%);
+}
+
+.loadingScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  height: 100vh;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .card {
     padding: 8px;

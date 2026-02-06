@@ -2,6 +2,7 @@
 import "boxicons/css/boxicons.min.css";
 import styles from "./dashboard.module.css";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Analytics from "./(Components)/Analytics/Analytics.jsx";
 import Bookmarks from "./(Components)/Bookmarks/Bookmarks.jsx";
 import Certificates from "./(Components)/Certificates/Certificates.jsx";
@@ -292,6 +293,12 @@ const Dashboard = () => {
     setActiveSection("My Courses");
   };
 
+  const router = useRouter();
+  const handleLogout = () => {
+    localStorage.removeItem("loggedInUser");
+    router.replace("/LogIn");
+  };
+
   return (
     <div>
       <div className={styles.dashboardContainer}>
@@ -389,7 +396,7 @@ const Dashboard = () => {
               </div>
               <div className={styles.Logout}>
                 <i className="bx bx-exit"></i>
-                <li>Logout</li>
+                <li onClick={handleLogout}>Logout</li>
               </div>
             </div>
           </ul>

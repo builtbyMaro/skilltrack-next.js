@@ -5,3 +5,9 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

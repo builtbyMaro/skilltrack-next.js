@@ -3,12 +3,15 @@ import "boxicons/css/boxicons.min.css";
 import styles from "./login.module.css";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Method from "./components/method";
 import Email from "./components/email";
 import loginUser from "@/lib/Auth/loginAuth";
+import Spinner from "@/Components/spinner";
 
 const Login = () => {
+  const [loading, setLoading] = useState(false);
   const [step, setStep] = useState("method");
   const [direction, setDirection] = useState(0);
 
@@ -46,6 +49,12 @@ const Login = () => {
   }, []);
 
   const [errors, setErrors] = useState({});
+  const router = useRouter();
+  const redirectUser = () => {
+    setTimeout(() => {
+      router.replace("/Dashboard");
+    }, 1000);
+  };
   const handleLogin = () => {
     const result = loginUser(users, loginData);
 
@@ -54,15 +63,28 @@ const Login = () => {
       return;
     }
 
+    localStorage.setItem("loggedInUser", JSON.stringify(result.user));
     setLoginData({
       email: "",
       password: "",
     });
+    redirectUser();
     setErrors({});
-    alert("login successful");
     setStep("method");
     setDirection(0);
+    setLoading(true);
   };
+
+  if (loading) {
+    return (
+      <div className={styles.loadingScreen}>
+        <div className={styles.successMessage}>
+          <h4>Logging In...</h4>
+        </div>
+        <Spinner size={30} />
+      </div>
+    );
+  }
 
   return (
     <div className={styles.loginContainer}>
