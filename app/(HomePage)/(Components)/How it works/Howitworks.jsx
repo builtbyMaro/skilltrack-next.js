@@ -26,16 +26,15 @@ const HowItWorks = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef(null);
-  const AUTO_SCROLL_TIME = 4000;
   const [direction, setDirection] = useState("next");
 
   const startAutoScroll = () => {
     intervalRef.current = setInterval(() => {
       setDirection("next");
       setCurrentIndex((prev) =>
-        prev === howItWorks.length - 1 ? 0 : prev + 1
+        prev === howItWorks.length - 1 ? 0 : prev + 1,
       );
-    }, AUTO_SCROLL_TIME);
+    }, 4000);
   };
 
   const resetAutoScroll = () => {

@@ -104,6 +104,7 @@
   .hiwContainer {
     display: flex;
     font-size: 75%;
+    margin-top: 20px;
   }
 
   .carousel {

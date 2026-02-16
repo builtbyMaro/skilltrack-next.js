@@ -8,7 +8,6 @@ import Method from "./components/method";
 import Email from "./components/email";
 import Name from "./components/name";
 import Password from "./components/password";
-import { userExists } from "@/lib/Auth/userExists";
 import { saveNewUser } from "@/lib/Auth/signupAuth";
 import { useRouter } from "next/navigation";
 import Spinner from "@/Components/spinner";
@@ -54,17 +53,11 @@ const SignUp = () => {
   const router = useRouter();
   const redirectUser = () => {
     setTimeout(() => {
-      router.replace("/Dashboard");
+      router.replace("/dashboard");
     }, 1000);
   };
 
   const handleSignUp = () => {
-    const emailExists = userExists(users, userData.email);
-    if (emailExists) {
-      setErrors({ email: "*an account already exists with this email" });
-      return;
-    }
-
     const updatedUsers = saveNewUser(users, userData);
     setUsers(updatedUsers);
 
@@ -154,7 +147,7 @@ const SignUp = () => {
       </div>
       <h2 className={styles.logIn}>
         Already have an account?{" "}
-        <Link href="/LogIn">
+        <Link href="/login">
           <span>LogIn</span>
         </Link>
       </h2>

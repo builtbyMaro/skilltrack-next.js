@@ -19,7 +19,7 @@ const Navbar = () => {
             <Link href="#Features">Features</Link>
             <Link href="#Pricing">Pricing</Link>
             <Link href="#Faq">FAQ</Link>
-            <Link href="/LogIn">Login</Link>
+            <Link href="/login">Login</Link>
           </div>
           <Button text="Sign Up" className={styles.signUpBtn} />
         </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
         >
           FAQ
         </Link>
-        <Link href="/LogIn" className={styles.navLink}>
+        <Link href="/login" className={styles.navLink}>
           Login
         </Link>
 

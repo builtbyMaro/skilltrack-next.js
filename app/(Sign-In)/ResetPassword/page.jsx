@@ -50,7 +50,7 @@ const Reset = () => {
   const router = useRouter();
   const redirectUser = () => {
     setTimeout(() => {
-      router.replace("/LogIn");
+      router.replace("/login");
     }, 1000);
   };
   const handleReset = () => {
@@ -133,7 +133,7 @@ const Reset = () => {
       </div>
       <h2 className={styles.signUp}>
         Don't have an account yet?{" "}
-        <Link href="/SignUp">
+        <Link href="/signup">
           <span>Sign Up</span>
         </Link>
       </h2>

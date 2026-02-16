@@ -12,7 +12,7 @@ const dashLayout = ({ children }) => {
   useEffect(() => {
     const user = getUser();
     if (!user) {
-      router.replace("/LogIn");
+      router.replace("/login");
     } else {
       setAuthChecked(true);
     }

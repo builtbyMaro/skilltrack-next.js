@@ -296,7 +296,7 @@ const Dashboard = () => {
   const router = useRouter();
   const handleLogout = () => {
     localStorage.removeItem("loggedInUser");
-    router.replace("/LogIn");
+    router.replace("/login");
   };
 
   return (

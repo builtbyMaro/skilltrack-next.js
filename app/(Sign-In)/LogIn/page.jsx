@@ -52,7 +52,7 @@ const Login = () => {
   const router = useRouter();
   const redirectUser = () => {
     setTimeout(() => {
-      router.replace("/Dashboard");
+      router.replace("/dashboard");
     }, 1000);
   };
   const handleLogin = () => {
@@ -123,7 +123,7 @@ const Login = () => {
       </div>
       <h2 className={styles.signUp}>
         Don't have an account yet?{" "}
-        <Link href="/SignUp">
+        <Link href="/signup">
           <span>Sign Up</span>
         </Link>
       </h2>

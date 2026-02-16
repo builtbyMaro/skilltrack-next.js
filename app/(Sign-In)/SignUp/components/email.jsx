@@ -3,6 +3,7 @@ import styles from "../signup.module.css";
 import { motion } from "framer-motion";
 import { stepVariants } from "@/lib/Animations/animations";
 import validateInputs from "@/lib/Validations/InputValidation";
+import { userExists } from "@/lib/Auth/userExists";
 
 const Email = ({
   userData,
@@ -22,12 +23,10 @@ const Email = ({
       return;
     }
 
-    const emailExists = users.some(
-      (u) => u.email.toLowerCase() === userData.email.toLowerCase()
-    );
+    const emailExists = userExists(users, userData.email);
 
     if (emailExists) {
-      setErrors({ email: "An account already exists with this email" });
+      setErrors({ email: "*an account already exists with this email" });
       return;
     }
 

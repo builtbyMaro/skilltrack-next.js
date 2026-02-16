@@ -31,7 +31,7 @@ const Method = ({ onEmailSelect, custom }) => {
       >
         Login with Email
       </button>
-      <Link href="/ResetPassword" className={styles.forgotPassword}>
+      <Link href="/resetpassword" className={styles.forgotPassword}>
         Forgot Password?
       </Link>
     </motion.div>
