@@ -12,7 +12,7 @@ const HowItWorks = () => {
     },
     {
       Heading: "Learn on the go",
-      Body: "learning experiences that cover every major professional competency.",
+      Body: "Immerse yourself in flexible, audio-based learning experiences that cover every major professional competency.",
     },
     {
       Heading: "Verify your progress",
